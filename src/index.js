@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, Link } from 'react-router-dom'
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import Merch from './components/merch'
-import Releases from './components/releases'
+import Items from './components/items'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import { Provider } from 'react-redux'
@@ -15,8 +14,7 @@ ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <div>
-          <Route exact path="/" component={Releases} />
-          <Route exact path="/merch" component={Merch} />
+          <Route exact path="/" component={Items} />
         </div>
       </ConnectedRouter>
     </Provider>
